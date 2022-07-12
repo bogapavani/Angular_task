@@ -7,6 +7,7 @@ import { TestComponent } from './test/test.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { PropertybindingComponent } from './propertybinding/propertybinding.component';
 import { ClassbindingComponent } from './classbinding/classbinding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ClassbindingComponent } from './classbinding/classbinding.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
