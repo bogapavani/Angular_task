@@ -1,10 +1,12 @@
 <div>
   <h1>Welcome to {{title}}</h1>
+
 </div>
 <div app-test></div>
 <!-- <div class="app-test"></div> -->
 <!-- <app-test></app-test> -->
 <app-interpolation></app-interpolation>
-<app-propertybinding></app-propertybinding>
+<app-propertybinding (childEvent)="message=$event" [parentData]="name"></app-propertybinding>
+<h1>{{message}}</h1>
 <app-classbinding></app-classbinding>
 <!-- <h1>{{title==='project'}}</h1> -->

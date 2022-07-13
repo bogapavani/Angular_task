@@ -49,7 +49,7 @@ color:red
   }`]
 })
 export class ClassbindingComponent implements OnInit {
-  public available=true;
+  public available = true;
   public code = "Angular";
   public Welcome = "";
   public successClass = "text-success";
@@ -68,7 +68,7 @@ export class ClassbindingComponent implements OnInit {
 
   }
   public color = "pink"
-  public array=["fruits","flowers","trees","plants"]
+  public array = ["fruits", "flowers", "trees", "plants"]
   constructor() { }
 
   ngOnInit(): void {
