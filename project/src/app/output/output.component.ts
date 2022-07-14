@@ -7,8 +7,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./output.component.scss']
 })
 export class OutputComponent implements OnInit {
-  @Input() public buttonprimary1: any;
+  @Input() public buttonprimary: any;
   @Input() public buttonSecondary:any;
+  @Input () public primary:any;
   @Output() public childEvent = new EventEmitter();
   constructor() { }
 

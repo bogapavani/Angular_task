@@ -10,7 +10,9 @@
 <h1>{{message}}</h1>
 <app-classbinding></app-classbinding>
 <app-pipes></app-pipes>  -->
-<app-output [buttonprimary1]="button1" [buttonSecondary]="button2" (childEvent)="display($event)"></app-output>
+<!-- <app-output [buttonprimary]="color.color1" [buttonSecondary]="color.color2" (childEvent)="display($event)"></app-output> -->
+<!-- <app-output [buttonprimary]="button1" [buttonSecondary]="button2"  (childEvent)="display($event)"></app-output> -->
+<app-output [primary]="color" [buttonprimary]="button1" [buttonSecondary]="button2" (childEvent)="display($event)"></app-output>
 {{message}}
 <!-- <nav>
    <a routerLink="/department" routerLinkActive="active">Department</a>

@@ -23,6 +23,10 @@ export class AppComponent implements OnInit {
   public name = "Angular Developer";
   public button1 = "bg-primary";
   public button2 = "bg-secondary";
+  public color={
+    color1:"bg-primary",
+    color2:"bg-secondary"
+  }
   public message: any;
   constructor() { }
 
