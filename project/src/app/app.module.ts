@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { AppservieService } from './appservie.service';
 import {HttpClientModule} from '@angular/common/http';
+import { OutputComponent } from './output/output.component';
 // import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // import { EmployeeComponent } from './employee/employee.component';
 // import { DepartmentComponent } from './department/department.component'
@@ -24,6 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
     ClassbindingComponent,
     PipesComponent,
     routingcomponents,
+    OutputComponent,
     // PageNotFoundComponent
   ],
   imports: [

@@ -1,12 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styles: [`
+  .text-error{
+color:red
+  }
+ .text-success {
+  background-color:green
+  }
+  .text-special{
+    font-style:italic;
+  }`]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'project';
+  public successClass = {
+    color: "skyblue",
+    fontStyle: "italic",
+  };
   public name = "Angular Developer";
-  public message = "";
+  public button1 = "bg-primary";
+  public button2 = "bg-secondary";
+  public message: any;
+  constructor() { }
+
+
+  ngOnInit(): void {
+    // console.log(this.message)
+  }
+  display(event: String) {
+    console.log(event)
+    this.message = event;
+  }
 }

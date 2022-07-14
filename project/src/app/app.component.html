@@ -1,19 +1,20 @@
-<div>
+<!-- <div>
    <h1>Welcome to {{title}}</h1>
 
 </div>
 <div app-test></div>
-<!-- <div class="app-test"></div> -->
-<!-- <app-test></app-test> -->
-<app-interpolation></app-interpolation>
+ <div class="app-test"></div> 
+ <app-test></app-test> 
+ <app-interpolation></app-interpolation>
 <app-propertybinding (childEvent)="message=$event" [parentData]="name"></app-propertybinding>
 <h1>{{message}}</h1>
 <app-classbinding></app-classbinding>
-<app-pipes></app-pipes>
-
-<nav>
+<app-pipes></app-pipes>  -->
+<app-output [buttonprimary1]="button1" [buttonSecondary]="button2" (childEvent)="display($event)"></app-output>
+{{message}}
+<!-- <nav>
    <a routerLink="/department" routerLinkActive="active">Department</a>
    <a routerLink="/employee" routerLinkActive="active">Employee</a>
-</nav>
-<router-outlet></router-outlet>
+</nav> -->
+<!-- <router-outlet></router-outlet> -->
 <!-- <h1>{{title==='project'}}</h1> -->
