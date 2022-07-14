@@ -17,6 +17,7 @@ import { reduce } from 'rxjs';
    <!-- PropertyBinding -->
    <h2 [style.color]="highLighted">{{code}}3</h2>
    <!-- ngClass -->
+
    <h2 [ngStyle]="titleMessage">{{code}}4</h2>
    <button (click)="click()">Submit</button>
    <button (click)="onClick($event)">Submit</button><br/><br/>

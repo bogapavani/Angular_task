@@ -17,6 +17,7 @@ export class PropertybindingComponent implements OnInit {
   @Output() public childEvent = new EventEmitter();
   constructor() { }
 
+  
   ngOnInit(): void {
   }
 
@@ -25,3 +26,5 @@ export class PropertybindingComponent implements OnInit {
   }
 
 }
+
+
