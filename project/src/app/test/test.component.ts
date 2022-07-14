@@ -13,7 +13,8 @@ color:orange
   }`]
 })
 export class TestComponent implements OnInit {
-  employee: any;
+  employee: any=[];
+  
   errorMsg:any;
   constructor(private _employee: AppservieService) { }
 
