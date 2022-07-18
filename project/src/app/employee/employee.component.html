@@ -1,1 +1,38 @@
 <p>employee works!</p>
+<div *ngIf="hide">
+    <select (click)="high()">
+        <option>Select</option>
+        <option>High1</option>
+        <option>High</option>
+        <option>Low</option>
+        <option>Medium</option>
+
+    </select>
+    <div *ngIf="show1">
+        <select>
+            <option>Select</option>
+            <option>High-Low</option>
+            <option>High-Medium</option>
+            <option>High-High</option>
+
+        </select>
+    </div>
+    <!-- <p>toggle works!</p> -->
+    <!-- <button #box (click)="get(box)">select</button>
+<div *ngIf="display">
+    <button #box1 (click)="show(box1)">
+        <option>high</option>
+    </button>
+    <h1 *ngIf="sh">high-low</h1>
+    <h1 *ngIf="sh">high-low</h1>
+    <h1 *ngIf="sh">high-low</h1>
+    <option>medium</option>
+    <option>high</option>
+</div> -->
+
+    <!-- <div>
+    <select>
+        <option *ngFor="let group of groups" value="{{group.id}}">{{group.items}}</option>
+    </select>
+</div>
+<input type="button" (click)="getVal()" value="submit" /> -->

@@ -1,11 +1,12 @@
 <!-- <button>B1</button> -->
 <!-- <button class="button1" (click)="fireEvent1()">B1</button> -->
-<button class="{{buttonprimary}}" (click)="fireEvent1()">B1</button>
-<button class="{{buttonSecondary}}" (click)="fireEvent2()">B2 </button><br/><br/>
-<button class="{{primary.color1}}">Button1</button>
-<button class="{{primary.color2}}">Button2</button><br/><br/>
+<button class="{{buttonprimary}}" (click)="fireEvent1()" *ngIf="hide">B1</button>
+<button class="{{buttonSecondary}}" (click)="fireEvent2()" *ngIf="!hide">B2 </button><br/><br/>
 
-<button class="button1" (click)="fireEvent1()">B1</button>
-<button class="button2"  (click)="fireEvent2()">B2 </button><br/><br/>
+<!-- <button class="{{primary.color1}}" *ngIf="hide">Button1</button>
+<button class="{{primary.color2}}" *ngIf="show">Button2</button><br/><br/> -->
+<!-- 
+<button class="button1" (click)="fireEvent1()" *ngIf="hide">B1</button>
+<button class="button2"  (click)="fireEvent2()" *ngIf="show">B2 </button><br/><br/> -->
 
 <!-- <button class="{{colors.color1}}">Button</button> -->

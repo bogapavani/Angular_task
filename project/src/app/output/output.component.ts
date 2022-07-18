@@ -11,6 +11,8 @@ export class OutputComponent implements OnInit {
   @Input() public buttonSecondary:any;
   @Input () public primary:any;
   @Output() public childEvent = new EventEmitter();
+  hide=true;
+  // show=false;
   constructor() { }
 
 
@@ -18,9 +20,13 @@ export class OutputComponent implements OnInit {
   }
 
   fireEvent1() {
+    // this.show=true;
+    this.hide=false;
     this.childEvent.emit("Clicked by user 1");
   }
   fireEvent2() {
+    this.hide=true;
+    // this.show=false;
     this.childEvent.emit("Clicked by user 2")
   }
 

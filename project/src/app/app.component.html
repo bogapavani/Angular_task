@@ -1,22 +1,25 @@
-<!-- <div>
+<div>
    <h1>Welcome to {{title}}</h1>
 
 </div>
 <div app-test></div>
  <div class="app-test"></div> 
- <app-test></app-test> 
+ <!-- <app-test></app-test>  -->
  <app-interpolation></app-interpolation>
 <app-propertybinding (childEvent)="message=$event" [parentData]="name"></app-propertybinding>
 <h1>{{message}}</h1>
 <app-classbinding></app-classbinding>
-<app-pipes></app-pipes>  -->
-<!-- <app-output [buttonprimary]="color.color1" [buttonSecondary]="color.color2" (childEvent)="display($event)"></app-output> -->
-<!-- <app-output [buttonprimary]="button1" [buttonSecondary]="button2"  (childEvent)="display($event)"></app-output> -->
+<app-pipes></app-pipes>  
+<app-output [buttonprimary]="color.color1" [buttonSecondary]="color.color2" (childEvent)="display($event)"></app-output>
+<app-output [buttonprimary]="button1" [buttonSecondary]="button2"  (childEvent)="display($event)"></app-output>
 <app-output [primary]="color" [buttonprimary]="button1" [buttonSecondary]="button2" (childEvent)="display($event)"></app-output>
 {{message}}
-<!-- <nav>
+
+<app-department></app-department>
+<nav>
    <a routerLink="/department" routerLinkActive="active">Department</a>
    <a routerLink="/employee" routerLinkActive="active">Employee</a>
-</nav> -->
+</nav> 
+<router-outlet></router-outlet>
+<h1>{{title==='project'}}</h1> 
 <!-- <router-outlet></router-outlet> -->
-<!-- <h1>{{title==='project'}}</h1> -->
