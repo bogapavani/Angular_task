@@ -1,0 +1,17 @@
+<p>serviceapp works!</p>
+<table border="1px">
+    <tr>
+        <th>UserId</th>
+        <th>body</th>
+        <th>title</th>
+        <th>id</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of getJson; let i = index">
+        <td>{{items.userId}}</td>
+        <td>{{items.body}}</td>
+        <td>{{items.title}}</td>
+        <td>{{items.id}}</td>
+        <td><button (click)="delete(items)">Delete</button><button>view</button></td>
+    </tr>
+</table>

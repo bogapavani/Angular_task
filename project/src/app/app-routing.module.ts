@@ -4,6 +4,7 @@ import { DepartmentDetailsComponent } from './department-details/department-deta
 import { DepartmentComponent } from './department/department.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ServiceappComponent } from './serviceapp/serviceapp.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/department', pathMatch: 'full' },
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: '**',
     component: PageNotFoundComponent
+  },
+  {
+    path: 'serviceApp',
+    component: ServiceappComponent
   }
 ];
 

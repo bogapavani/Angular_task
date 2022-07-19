@@ -12,6 +12,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { AppservieService } from './appservie.service';
 import {HttpClientModule} from '@angular/common/http';
 import { OutputComponent } from './output/output.component';
+import { UserPipe } from './pipes/user.pipe';
+import { ServiceappComponent } from './serviceapp/serviceapp.component';
 // import { DepartmentDetailsComponent } from './department-details/department-details.component';
 // import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // import { EmployeeComponent } from './employee/employee.component';
@@ -27,6 +29,8 @@ import { OutputComponent } from './output/output.component';
     PipesComponent,
     routingcomponents,
     OutputComponent,
+    UserPipe,
+    ServiceappComponent,
     // DepartmentDetailsComponent,
     // PageNotFoundComponent
   ],

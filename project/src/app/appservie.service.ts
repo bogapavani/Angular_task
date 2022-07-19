@@ -9,15 +9,27 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AppservieService {
+  urls: any = 'https://jsonplaceholder.typicode.com/posts';
   url: string = "/assets/data/employee.json"
   constructor(private http: HttpClient) { }
 
-  getEmployee(): Observable<IEmployee[]> {
-    return this.http.get<IEmployee[]>(this.url)
+  getEmployee(){
+    return this.http.get(this.url)
     // .catch(this.errorHandler)
   }
+
+  getData() {
+    return this.http.get('https://jsonplaceholder.typicode.com/posts')
+  }
+
+  deleteData(id: any) {
+    console.log("hello",id)
+    return this.http.delete(`https://jsonplaceholder.typicode.com/posts/`+id)
+
+  }
+
   // errorHandler(error:HttpErrorResponse){
   //   return Observable.throw (error.message || "Server Error");
-    
+
   // }
 }
