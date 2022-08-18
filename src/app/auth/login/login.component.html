@@ -1,0 +1,42 @@
+<div class="background">
+    <div class="form">
+        <h1>Login</h1>
+        <hr>
+        <form [formGroup]="loginForm">
+            <!-- <div>
+                <label>Name :</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+                <div *ngIf="f.name.touched && f.name.invalid">
+                    <div class="text-error" *ngIf="f.name.errors.required">Name is Required</div>
+                </div>
+            </div><br /> -->
+            <div class="input">
+                <div><input type="text" placeholder="UserName" formControlName="username"><img
+                        src="https://t3.ftcdn.net/jpg/05/14/18/46/360_F_514184651_W5rVCabKKRH6H3mVb62jYWfuXio8c8si.jpg"
+                        alt="">
+                    <div *ngIf="f.username.touched && f.username.invalid">
+                        <div class="text-error" *ngIf="f.username.errors.required">Username is Required</div>
+                        <div class="text-error" *ngIf="f.username.errors.email">Username is invalid
+                        </div>
+                    </div>
+                </div>
+                <div><input [type]="inputType" placeholder="password" formControlName="password">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsGJrcCZqPdoOOlzPoW8Qh1Pf6NRL1ykKElg&usqp=CAU"
+                        alt="">
+                    <div *ngIf="f.password.touched && f.password.invalid">
+                        <div class="text-error" *ngIf="f.password.errors.required">Password is Required</div>
+                        <!-- <div class="text-error" *ngIf="f.password.errors.pattern">Password is invalid
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="form-checkinput"><input (change)="showpassword($event)" type="checkbox"> Show Password</div>
+        <div class="password"><a (click)="password()">Forget password</a></div>
+
+
+        <div class="checkbox"><input type="checkbox"> Remember me
+            <button (click)="login()">Login</button>
+        </div>
+    </div>
+</div>
