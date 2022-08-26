@@ -44,7 +44,7 @@
                                         <img src="https://thumbs.dreamstime.com/b/laptop-icon-laptop-icon-white-background-133509399.jpg"
                                             class="img-radius" alt="User-Profile-Image">
                                     </div>
-                                    <h6 class="f-w-600 headers">{{items.device_type}}</h6>
+                                    <h6 class="f-w-600 headers">{{items.name}}</h6>
 
                                     <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                 </div>
@@ -62,33 +62,43 @@
                                             <p class="m-b-10 f-w-600 headers">OS</p>
                                             <h6 class="text-muted f-w-400 text">{{items.os}}</h6>
                                         </div><br><br>
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600 headers">Service Tag</p>
                                             <h6 class="text-muted f-w-400 text">{{items.service_tag}}</h6>
                                         </div>
+                                        <!-- <form [formGroup]="listForm"> -->
+                                        <div class="col-sm-6">
+
+                                            <button class="btn btn-primary" (click)="edit(items)">Assign</button>
+
+
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600 headers">Assigned To</p>
+                                            <h6 class="text-muted f-w-400 text">{{items.employee?.name}}</h6>
+                                            <!-- <h6 class="f-w-600 headers">{{items.name}}</h6> -->
+                                        </div>
+                                        <!-- </form> -->
                                     </div>
                                     <!--Devices Assigned-->
-                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 ">Devices Assigned</h6>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <p class="m-b-10 f-w-600 headers" style="margin: 0px;">Assigned to</p>
-                                            <!-- <button class="btn btn-primary" (click)="assign()">Assign</button>
-                                            <h6 class="text-muted f-w-400 text">{{items.employee?.name}}</h6> -->
-                                            <a routerLink="/admin/assign-employee" (click)="employee()"
-                                                style="text-decoration: none; font-size: 12px">=>Click here to
-                                                Assigned</a>
-                                        </div>
-                                    </div>
+                                    <!-- <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 ">Devices Assigned</h6> -->
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-          
+                <!-- <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 ">Devices Assigned</h6>
+                <div class="row">
+                    <div class="col-sm-12" *ngFor="let item of devicesEmployee">
+                        <p class="m-b-10 f-w-600 headers">Assigned to</p>
+                        <h6 class="text-muted f-w-400 text">{{item.employee.name}}</h6>
+                    </div>
+                </div> -->
 
             </div>
         </div>
     </div>
 </body>
-<!-- <app-sidebarnav></app-sidebarnav> -->
+<app-sidenavbar></app-sidenavbar>

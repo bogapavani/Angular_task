@@ -18,6 +18,7 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 </head>
+<app-sidenavbar></app-sidenavbar>
 
 <body>
     <div class="page-content page-container" id="page-content">
@@ -26,10 +27,11 @@
                 <div class="col-md-8">
                     <div class="search">
                         <i class="fa fa-search"></i>
-                        <input type="text" class="form-control" placeholder="Search Employee...">
-                        <form (ngSubmit)="filterData()" [formGroup]="addEmployeeForm">
-                            <button class="btn btn-primary">Search</button>
-                        </form>
+                        <input type="text" class="form-control" placeholder="Search Employee..."
+                            [(ngModel)]="addEmployee">
+                        <!-- <form (ngSubmit)="filterData()" [formGroup]="addEmployeeForm"> -->
+                        <button class="btn btn-primary" (click)="filterData()">Search</button>
+                        <!-- </form> -->
                     </div>
                 </div>
             </div>
@@ -46,7 +48,7 @@
                                             alt="User-Profile-Image">
                                     </div>
                                     <h6 class="f-w-600 headers">{{items.name}}</h6>
-                                    <p class="headers">{{items.role}}</p>
+                                    <p class="headers">{{items.designation}}</p>
                                     <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                 </div>
                             </div>
@@ -57,24 +59,36 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600 headers">Emp Id</p>
-                                            <h6 class="text-muted f-w-400 text">{{items.empId}}</h6>
+                                            <h6 class="text-muted f-w-400 text">{{items.id}}</h6>
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600 headers">Phone</p>
-                                            <h6 class="text-muted f-w-400 text">{{items.phoneNumber}}</h6>
+                                            <h6 class="text-muted f-w-400 text">{{items.phone_number}}</h6>
                                         </div><br><br>
                                         <div class="col-sm-12">
                                             <p class="m-b-10 f-w-600 headers">Email</p>
                                             <h6 class="text-muted f-w-400 text">{{items.email}}</h6>
                                         </div>
                                     </div>
-                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 ">Devices Assigned</h6>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <p class="m-b-10 f-w-600 headers">Device Name</p>
-                                            <a href="">No device Assigned</a>
-                                            <h6 class="text-muted f-w-400 text">{{items.devices}}</h6>
+                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 "> Assigned Devices </h6>
+                                    <div class="d-flex flex-row">
+
+                                        <div class="row" *ngFor="let device of items.devices">
+
+
+                                            <!-- <i class="fa fa-plus plus color-blue pointer"
+                                                *ngIf="!items.devices.name"></i> -->
+
+                                            <div>
+                                                <h3 class="text-muted f-w-400 text">{{device.name}}</h3>
+                                            </div>
+
+
                                         </div>
+                                        <a routerLink="/admin/assign-devices/{{items.id}}" (click)="devices(items)"
+                                            style="text-decoration: none;">No device
+                                            Assigned</a>
+
                                     </div>
                                 </div>
                             </div>
@@ -86,4 +100,4 @@
     </div>
 </body>
 
-</html>
+</html>3

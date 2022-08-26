@@ -1,16 +1,16 @@
-import { Directive,HostListener,HostBinding } from '@angular/core';
+import { Directive, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[appSidebar]',
-  exportAs:'appSidebar'
+  exportAs: 'appSidebar'
 })
 export class SidebarDirective {
 
-@HostBinding('class.is-open') click=false;
+  @HostBinding('class.is-open') click = false;
   constructor() { }
 
 
-@HostListener('click') onClic(){
-this.click=!this.click;
-}
+  @HostListener('click') onClic() {
+    this.click = !this.click;
+  }
 }

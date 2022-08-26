@@ -1,8 +1,8 @@
 export interface Devices {
     id: number;
     name: string;
-    assignedTo: string;
-    deviceType:string;
+    employee: string;
+    device_type: string;
     os: string;
-    serviceTag: string;
+    service_tag: string;
 }

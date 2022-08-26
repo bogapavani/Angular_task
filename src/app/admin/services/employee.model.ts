@@ -2,10 +2,11 @@ export interface Employee {
     id: number;
     name: string;
     email: string;
-    phoneNumber: number;
+    phone_number: number;
     designation: string,
-    empId: string,
-    role: string,
+    emp_id: string,
+    // role: string,
+    // user:{},
     devices: string,
 
 }

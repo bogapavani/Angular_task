@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { EmployeeService } from '../../services/employee.service';
+import { ListService } from '../../services/list.service';
 
 @Component({
   selector: 'app-add-employee',
@@ -7,18 +10,30 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./add-employee.component.css']
 })
 export class AddEmployeeComponent implements OnInit {
-
+  error: any;
   addEmployeeForm: any; // formgroup name
-  constructor(private fb: FormBuilder) {
+
+  roles = [{
+    "id": 0,
+    "role": "Admin"
+  },
+  {
+    "id": 1,
+    "role": "Employee"
+  }]
+  constructor(private fb: FormBuilder,
+    private list: ListService,
+    private router: Router,
+    private employeeService: EmployeeService) {
 
     this.addEmployeeForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
       designation: ['', [Validators.required]],
-      phonenumber: ['', Validators.required],
-      empId: ['', Validators.required],
-      role: ['', Validators.required],
-      devices: ['', Validators.required]
+      phone_number: ['', Validators.required],
+      emp_id: [''],
+      roles: ['', Validators.required],
+      devices: ['']
     })
   }
 
@@ -31,11 +46,36 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   submit() {
+    if (!this.addEmployeeForm.valid) {
+      this.addEmployeeForm.markAllAsTouched();
+    } else {
+      // this.loaderService.showLoader();
+      this.list
+        .addEmployee({
+          name: this.addEmployeeForm.value.name,
+          email: this.addEmployeeForm.value.email,
+          designation: this.addEmployeeForm.value.designation,
+          phone_number: this.addEmployeeForm.value.phone_number,
+          emp_id: this.addEmployeeForm.value.emp_id,
+          roles: this.addEmployeeForm.value.roles,
+          devices: this.addEmployeeForm.value.devices,
+        })
+        .subscribe(
+          (response: any) => {
+            console.log(response);
 
+            this.router.navigate(['/admin/employeelist'])
+          },
+
+        );
+    }
   }
 
-  cancel() {
 
+
+
+  cancel() {
+    this.router.navigate(['/admin/employeelist']);
   }
 
 }

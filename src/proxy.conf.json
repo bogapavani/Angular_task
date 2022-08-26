@@ -1,0 +1,6 @@
+{
+    "/devices":{
+        "target":"https://8174-183-82-122-219.in.ngrok.io",
+        "secure":false
+    }
+}

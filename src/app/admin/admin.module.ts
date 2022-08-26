@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // routing module
+import { HttpClientModule } from '@angular/common/http';
 import { AdminRoutingModule } from './admin-routing.module';
 // components
 import { AddDevicesComponent } from './components/add-devices/add-devices.component';
@@ -13,7 +14,11 @@ import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.componen
 import { HelloComponent } from './components/hello.component';
 import { SidebarDirective } from './components/sidenav.directive';
 import { AdminhomeComponent } from './components/adminhome/adminhome.component';
-
+import { NgSelectModule } from '@ng-select/ng-select';
+import { AssignDevicesComponent } from './components/assign-devices/assign-devices.component';
+import { AssignEmployeesComponent } from './components/assign-employees/assign-employees.component';
+import { EditDevicesComponent } from './components/edit-devices/edit-devices.component';
+import { EditEmployeesComponent } from './components/edit-employees/edit-employees.component';
 @NgModule({
   declarations: [
 
@@ -25,7 +30,11 @@ import { AdminhomeComponent } from './components/adminhome/adminhome.component';
     SidenavbarComponent,
     HelloComponent,
     SidebarDirective,
-    AdminhomeComponent
+    AdminhomeComponent,
+    AssignDevicesComponent,
+    AssignEmployeesComponent,
+    EditDevicesComponent,
+    EditEmployeesComponent
 
   ],
   imports: [
@@ -34,7 +43,8 @@ import { AdminhomeComponent } from './components/adminhome/adminhome.component';
     ReactiveFormsModule,
     // routingmodule
     AdminRoutingModule,
-
+    HttpClientModule,
+    NgSelectModule
   ]
 })
 export class AdminModule { }
